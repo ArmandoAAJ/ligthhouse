@@ -1,13 +1,15 @@
 export default {
   COLORS: {
     WHITE: '#FFFFFF',
+    WHITE_100: '#FAFAFA',
 
     RED_DARK: '#FF0042',
 
-    GRAY_700: '#393A31',
-    GRAY_600: '#9B9C91',
-    GRAY_500: '#C6C7BC',
-    GRAY_100: '#FAFAFA',
+    HELP_900: '#393A31',
+    HELP_500: '#86877C',
+    HELP_400: '#9B9C91',
+    HELP_300: '#B0B1A6',
+    HELP_200: '#C6C7BC',
   },
   FONT_FAMILY: {
     REGULAR: 'OpenSans_400Regular',
@@ -27,5 +29,7 @@ export default {
   SPACES: {
     MD: 20,
     LG: 24,
+    SM: 10,
+    XL: 48,
   },
 };

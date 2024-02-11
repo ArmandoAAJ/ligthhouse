@@ -12,7 +12,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { AppRoutes } from 'src/routes/app.routes';
 
 export default function App() {
-  const [fontsLoaded] = useFonts({ OpenSans_400Regular, OpenSans_700Bold });
+  const [fontsLoaded] = useFonts({
+    OpenSans_400Regular,
+    OpenSans_700Bold,
+  });
 
   if (!fontsLoaded) return null;
 
