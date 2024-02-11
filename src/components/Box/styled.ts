@@ -1,10 +1,9 @@
 import Theme from '@theme/index';
+import { ThemeType } from 'src/@types/styled';
 import styled from 'styled-components/native';
 
-type ThemeSpaces = typeof Theme.SPACES;
-
 interface BoxProps {
-  size?: keyof ThemeSpaces;
+  size?: keyof ThemeType['SPACES'];
 }
 
 export const Box = styled.View<BoxProps>`
