@@ -1,4 +1,3 @@
-import Theme from '@theme/index';
 import { ThemeType } from 'src/@types/styled';
 import styled from 'styled-components/native';
 

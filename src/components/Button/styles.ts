@@ -1,5 +1,4 @@
-import { Body, Heading } from '@components/Text';
-import { Pressable, PressableProps } from 'react-native';
+import { Pressable } from 'react-native';
 import { css } from 'styled-components';
 import styled from 'styled-components/native';
 

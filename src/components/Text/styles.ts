@@ -1,3 +1,4 @@
+import { Text } from 'react-native';
 import { ThemeType } from 'src/@types/styled';
 import { css } from 'styled-components';
 import styled from 'styled-components/native';
@@ -8,7 +9,7 @@ interface PropsText {
   lineH?: keyof ThemeType['LINE_HEIGHT'];
 }
 
-export const Heading = styled.Text<PropsText>`
+export const Heading = styled(Text)<PropsText>`
   color: ${({ theme }) => theme.COLORS.HELP_900};
   font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
   font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
@@ -34,7 +35,7 @@ export const Heading = styled.Text<PropsText>`
     `}
 `;
 
-export const Body = styled.Text<PropsText>`
+export const Body = styled(Text)<PropsText>`
   color: ${({ theme }) => theme.COLORS.HELP_900};
   font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
   font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
