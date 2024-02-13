@@ -9,7 +9,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import theme from './src/theme';
 
 import { Routes } from 'src/routes/app.routes';
-import { UserProvider } from 'src/context/contextUser';
+import { UserProvider } from '@context/contextUser';
 
 SplashScreen.preventAutoHideAsync();
 

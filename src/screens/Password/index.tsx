@@ -5,7 +5,7 @@ import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { RouteProp, useRoute } from '@react-navigation/native';
 
 import { setUser } from '@storage/user';
-import { useAuth } from 'src/context/contextUser';
+import { useAuth } from '@context/contextUser';
 
 type Inputs = {
   password: string;

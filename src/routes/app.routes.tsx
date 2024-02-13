@@ -9,7 +9,7 @@ import back from '@assets/back.png';
 import { Password } from '@screens/Password';
 import { Home } from '@screens/Home';
 import { NavigationContainer } from '@react-navigation/native';
-import { useAuth } from 'src/context/contextUser';
+import { useAuth } from '@context/contextUser';
 import { Camera } from '@screens/Camera';
 import { Button } from 'react-native';
 import { clearStorage } from '@storage/user';
