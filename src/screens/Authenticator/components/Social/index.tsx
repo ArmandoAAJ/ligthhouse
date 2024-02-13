@@ -6,19 +6,26 @@ import google from '@assets/google.png';
 import apple from '@assets/apple.png';
 
 import { Container, Image, Text } from './styles';
+import { useNavigation } from '@react-navigation/native';
+import { RouterName } from '@routes/index';
 
 export const Social: React.FC = () => {
+  const { navigate } = useNavigation();
+  const handleCreateAccount = () => {
+    navigate(RouterName.email);
+  };
+
   return (
     <Container>
-      <Button icon>
+      <Button onPress={handleCreateAccount} icon>
         <Image source={facebook} />
         <Text>Entrar com Facebook</Text>
       </Button>
-      <Button icon>
+      <Button onPress={handleCreateAccount} icon>
         <Image source={apple} />
         <Text>Entrar com Apple</Text>
       </Button>
-      <Button icon>
+      <Button onPress={handleCreateAccount} icon>
         <Image source={google} />
         <Text>Entrar com Google</Text>
       </Button>

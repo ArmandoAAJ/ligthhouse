@@ -6,15 +6,22 @@ import { Button } from '@components/Button';
 import { Header } from './components/Header';
 import { Body, Heading } from '@components/Text';
 import { Social } from './components/Social';
+import { useNavigation } from '@react-navigation/native';
+import { RouterName } from '@routes/index';
 
 export const Authenticator = () => {
+  const { navigate } = useNavigation();
+  const handleCreateAccount = () => {
+    navigate(RouterName.email);
+  };
+
   return (
     <ScrollView>
       <Header />
       <Image />
       <Box size="MD" />
       <Content>
-        <Button>
+        <Button onPress={handleCreateAccount}>
           <Heading lineH="MD" colorT="WHITE_100" size="MD">
             Criar minha conta
           </Heading>

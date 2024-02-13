@@ -2,7 +2,12 @@ import styled from 'styled-components/native';
 
 import logo from '@assets/lighthouse.png';
 
-export const ScrollView = styled.ScrollView`
+export const ScrollView = styled.ScrollView.attrs({
+  contentContainerStyle: {
+    paddingBottom: 20,
+  },
+  showsVerticalScrollIndicator: false,
+})`
   flex: 1;
   padding: 0 ${({ theme }) => theme.SPACES.MD}px;
 `;
