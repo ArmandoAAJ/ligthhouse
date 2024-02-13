@@ -9,6 +9,12 @@ import { Social } from './components/Social';
 import { useNavigation } from '@react-navigation/native';
 import { RouterName } from '@routes/index';
 
+import { TEST_ID } from './costants';
+
+const {
+  buttons: { createAccount },
+} = TEST_ID;
+
 export const Authenticator = () => {
   const { navigate } = useNavigation();
   const handleCreateAccount = () => {
@@ -21,7 +27,7 @@ export const Authenticator = () => {
       <Image />
       <Box size="MD" />
       <Content>
-        <Button onPress={handleCreateAccount}>
+        <Button testID={createAccount} onPress={handleCreateAccount}>
           <Heading lineH="MD" colorT="WHITE_100" size="MD">
             Criar minha conta
           </Heading>
