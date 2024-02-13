@@ -5,11 +5,13 @@ import {
   OpenSans_400Regular,
   OpenSans_700Bold,
 } from '@expo-google-fonts/open-sans';
-
+import * as SplashScreen from 'expo-splash-screen';
 import theme from './src/theme';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { AppRoutes } from 'src/routes/app.routes';
+import { Routes } from 'src/routes/app.routes';
+import { UserProvider } from 'src/context/contextUser';
+
+SplashScreen.preventAutoHideAsync();
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -22,14 +24,10 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <StatusBar
-          barStyle="light-content"
-          backgroundColor="transparent"
-          translucent
-        />
-        <NavigationContainer>
-          <AppRoutes />
-        </NavigationContainer>
+        <StatusBar backgroundColor="transparent" translucent />
+        <UserProvider>
+          <Routes />
+        </UserProvider>
       </>
     </ThemeProvider>
   );
