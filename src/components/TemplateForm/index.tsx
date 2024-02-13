@@ -3,6 +3,12 @@ import React from 'react';
 import { Button, Container, Content, TouchableWithoutFeedback } from './styles';
 import { Heading } from '@components/Text';
 
+import { TEST_ID } from './constants';
+
+const {
+  buttons: { continueB },
+} = TEST_ID;
+
 interface TemplateFormProps {
   title: string;
   children: React.ReactNode;
@@ -23,7 +29,7 @@ export const TemplateForm: React.FC<TemplateFormProps> = ({
           <Heading>{title}</Heading>
           {children}
         </Content>
-        <Button onPress={onPress} disabled={disabled}>
+        <Button testID={continueB} onPress={onPress} disabled={disabled}>
           <Heading
             colorT={disabled ? 'HELP_500' : 'WHITE_100'}
             size="MD"
