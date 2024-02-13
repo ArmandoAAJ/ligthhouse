@@ -70,6 +70,7 @@ export const Password: React.FC = () => {
             autoFocus
             messageError={errors?.password?.message}
             placeholder="Senha"
+            testID="Senha"
             onChangeText={onChange}
             secureTextEntry
             value={value}
